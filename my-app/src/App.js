@@ -3,6 +3,8 @@ import './App.css';
 
 // this is not html but is similar it is JSX
 
+// COMPONENT AND PROPS
+/*
 function Hello(props) {
   console.log(props);
   return (
@@ -11,15 +13,48 @@ function Hello(props) {
       { props.mytext }
       </div>
   );
+  }
+  */
+
+  // Component, props and STATE
+  // state is an object and stores data of the component Hello
+  class Hello extends React.Component {
+    
+    state = {
+      show: true
+    }
+    //  !sinifica si state show esta en falso cambiar a true y si esta en true cambiar a false
+    changeShow = () => {
+      this.setState({show: !this.state.show})
+    }
+
+    render() {
+      if (this.state.show) {
+        return (
+          <div id="hi">
+            <h3>{this.props.subtitle}</h3>
+            {this.props.mytext}
+            <button onClick={ this.changeShow }>Change state</button>
+          </div>
+        )
+      } else {
+        return <h1>
+          No elements
+          <button onClick={this.changeShow}>
+            Change show
+          </button>
+          </h1>
+      }
+    } 
+  }
   // I use . because props is received as an object
   //ex: 
   /*
     {
       mytext: "Hello Jhon"
     }
-  */
-}
 
+*/
 // I can write the component App in 3 different ways
 // 1. as  class inheriting from React.component 2. as arrow function 3. as a normal function
 
