@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "title": "Read",
+    "descripcion": "Read a daily book",
+    "done": false
+  },
+  {
+    "id": 1,
+    "title": "Excersise",
+    "descripcion": "Do any sport",
+    "done": false
+  },
+  {
+    "id": 2,
+    "title": "Study",
+    "descripcion": "Practice what you have learned",
+    "done": false
+  } 
+]
+
+
