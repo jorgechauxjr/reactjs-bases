@@ -5,6 +5,10 @@ import tasks from './sample/tasksData.json'
 import Tasks from './components/Tasks'
 
 console.log(tasks)
+// 1)
+// App have in the state different tasks
+// Send the data to the component Tasks
+//./components/Tasks
 
 class App extends React.Component {
   
