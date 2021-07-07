@@ -1,14 +1,22 @@
 import React from 'react';
-import './Task.css'
 
 // 3)
 // Receive every unique task from ./components/Tasks take each data and show it in a <div>
 // This will return a component for each task
 
 class Task extends React.Component {
+  
+  StyleCompleted() {
+    return {
+      fontSize: '20px',
+      color: this.props.taskPr.done ? 'gray' : 'blue',
+      textDecoration: this.props.taskPr.done ? 'line-through' : 'none'
+    }
+  }
+  
   render() {
     const {taskPr} = this.props;
-    return  <p className="blue">
+    return  <p style={this.StyleCompleted()}>
       { taskPr.title } -
       { taskPr.descripcion } -
       { taskPr.done } -
