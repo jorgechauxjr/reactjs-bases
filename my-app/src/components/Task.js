@@ -1,5 +1,7 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
+
 // 3)
 // Receive every unique task from ./components/Tasks take each data and show it in a <div>
 // This will return a component for each task
@@ -27,6 +29,10 @@ class Task extends React.Component {
       </button>
   </p>
  }
+}
+
+Task.propTypes = {
+  taskPr: PropTypes.object.isRequired
 }
 
 // this is not css, it's JavaScript objects to give style

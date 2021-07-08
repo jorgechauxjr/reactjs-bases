@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Task from './Task'
+import Task from './Task';
+import PropTypes from 'prop-types';
 
 // 2)
 // map each task received from App and for each "recorrido" generate a unique task and send it to ./component/Task
@@ -16,5 +17,9 @@ class Tasks extends React.Component {
   render() {
     return this.props.tasksPr.map(e => <Task taskPr={e} key={e.id}/>);
   }
+}
+
+Tasks.propTypes = {
+  tasksPr: PropTypes.array.isRequired
 }
 export default Tasks;
